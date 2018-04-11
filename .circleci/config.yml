@@ -9,3 +9,7 @@ jobs:
       - checkout
       - run: yarn install
       - run: yarn build -pr
+      - run: tar -cf dist.tar dist
+      - store_artifacts:
+          path: ~/repo/dist.tar
+
